@@ -22,6 +22,8 @@ def FileTransfer() -> tuple:
     SourcePath = r"F:\FC_Backups" + FileStr
 
     DestinationPath =  r"X:\FC_BACKUPS"
+    #works on machine but when file is turned into an exe wont run on the server
+    #says that it can find a dll file
     for x in trange(100, unit = "MB", desc='Copying...', ncols = 75, bar_format = '{desc} |{bar}| {n_fmt}% {rate_fmt}'):
         shutil.copy2(SourcePath, DestinationPath)
     return FileStrForEmail, SourcePath, DestinationPath
@@ -66,9 +68,10 @@ def FailureEmailNotification() -> None:
     server.quit()
 
 try:
-    CompletetionEmailNotification(FileTransfer())
+    FileTransfer()
+    #CompletetionEmailNotification(FileTransfer())
     print("\nFile Transfer successful")
 except:
-    FailureEmailNotification()
+    #FailureEmailNotification()
     print("\nFile Transfer unsuccessful")
 
