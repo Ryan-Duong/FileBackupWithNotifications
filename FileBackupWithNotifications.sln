@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FileBackupWithNotifications", "FileBackupWithNotifications\FileBackupWithNotifications.pyproj", "{292A81B5-6633-408E-9BE1-28F682A66BA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{292A81B5-6633-408E-9BE1-28F682A66BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292A81B5-6633-408E-9BE1-28F682A66BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {013CC0B5-22A3-4874-A1BB-61287B8E765C}
+	EndGlobalSection
+EndGlobal
