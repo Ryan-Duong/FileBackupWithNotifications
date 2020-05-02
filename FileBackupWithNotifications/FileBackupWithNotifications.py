@@ -3,6 +3,7 @@ import shutil
 import datetime
 import smtplib
 from datetime import datetime
+from tqdm import trange
 
 """Script To Move Files
 """
@@ -21,8 +22,8 @@ def FileTransfer() -> tuple:
     SourcePath = r"F:\FC_Backups" + FileStr
 
     DestinationPath =  r"X:\FC_BACKUPS"
-
-    shutil.copy2(SourcePath, DestinationPath)
+    for x in trange(100, unit = "MB", desc='Copying...', ncols = 75, bar_format = '{desc} |{bar}| {n_fmt}% {rate_fmt}'):
+        shutil.copy2(SourcePath, DestinationPath)
     return FileStrForEmail, SourcePath, DestinationPath
 
 def CompletetionEmailNotification(EmailStrAndBothPaths:tuple) -> None:
@@ -66,8 +67,8 @@ def FailureEmailNotification() -> None:
 
 try:
     CompletetionEmailNotification(FileTransfer())
-    print("File Transfer successful")
+    print("\nFile Transfer successful")
 except:
     FailureEmailNotification()
-    print("File Transfer unsuccessful")
+    print("\nFile Transfer unsuccessful")
 
